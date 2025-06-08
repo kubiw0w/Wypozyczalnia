@@ -8,7 +8,6 @@ import javafx.scene.control.TextField;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-
 import java.io.IOException;
 
 public class LoginController {
@@ -24,7 +23,9 @@ public class LoginController {
         String username = usernameField.getText();
         String password = passwordField.getText();
 
-        if (canConnect(username, password)) {
+        Connection conn = tryConnect(username, password);
+        if (conn != null) {
+            DBConnection.setCredentials(username, password);
             showAlert("Sukces", "Zalogowano pomyślnie!");
             Login.changeScene("/MainMenu/MainMenu.fxml");
         } else {
@@ -32,14 +33,15 @@ public class LoginController {
         }
     }
 
-    private boolean canConnect(String username, String password) {
-        String jdbcUrl = "jdbc:oracle:thin:@//localhost:1521/orclpdb";
+    private Connection tryConnect(String username, String password) {
+        String url = "jdbc:oracle:thin:@//localhost:1521/orclpdb";
 
-        try (Connection conn = DriverManager.getConnection(jdbcUrl, username, password)) {
-            return true;
+        try {
+            Connection conn = DriverManager.getConnection(url, username, password);
+            return conn;
         } catch (SQLException e) {
             e.printStackTrace();
-            return false;
+            return null;
         }
     }
 

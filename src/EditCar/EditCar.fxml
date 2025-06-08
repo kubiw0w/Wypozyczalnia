@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -12,9 +14,20 @@
             <Font name="Sitka Heading" size="52.0" />
         </font>
     </Text>
-    <Text layoutX="417.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="scena edycji danych samochodu" textAlignment="CENTER" wrappingWidth="445.13671875">
-        <font>
-            <Font name="Sitka Heading" size="52.0" />
-        </font>
-    </Text>
+   <Button fx:id="backButton" layoutX="54.0" layoutY="48.0" mnemonicParsing="false" onAction="#backScene" prefHeight="46.0" prefWidth="94.0" />
+   <TextField fx:id="registrationField" layoutX="523.0" layoutY="264.0" onAction="#editCar" prefHeight="40.0" prefWidth="234.0">
+      <font>
+         <Font name="Sitka Heading" size="14.0" />
+      </font>
+   </TextField>
+   <Text layoutX="304.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wpisz numer rejestracyjny samochodu:" textAlignment="CENTER" wrappingWidth="671.13671875">
+      <font>
+         <Font name="Sitka Heading" size="30.0" />
+      </font>
+   </Text>
+   <Button fx:id="editButton" layoutX="580.0" layoutY="350.0" mnemonicParsing="false" onAction="#editCar" prefHeight="40.0" prefWidth="119.0" style="-fx-background-color: whitE;" text="Edytuj">
+      <font>
+         <Font name="Sitka Heading Bold" size="18.0" />
+      </font>
+   </Button>
 </AnchorPane>
