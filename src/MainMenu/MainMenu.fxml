@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -13,14 +15,70 @@
          <Font name="Sitka Heading" size="52.0" />
       </font>
    </Text>
-   <Button fx:id="addCarButton" layoutX="229.0" layoutY="149.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" />
-   <Button fx:id="showButton" layoutX="451.0" layoutY="149.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" />
-   <Button fx:id="editCarButton" layoutX="673.0" layoutY="149.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" />
-   <Button fx:id="addCustomerButton" layoutX="889.0" layoutY="149.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" />
-   <Button fx:id="showCustomersButton" layoutX="229.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" />
-   <Button fx:id="editCustomerButton" layoutX="451.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" />
-   <Button fx:id="rentCarButton" layoutX="673.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" />
-   <Button fx:id="deleteButton" layoutX="889.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" />
+   <Button fx:id="addCarButton" layoutX="229.0" layoutY="149.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" style="-fx-background-color: transparent;">
+      <graphic>
+         <ImageView fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../images/addcar.jpg" />
+            </image>
+         </ImageView>
+      </graphic></Button>
+   <Button fx:id="showButton" layoutX="451.0" layoutY="149.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" style="-fx-background-color: transparent;">
+      <graphic>
+         <ImageView fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../images/showcars.jpg" />
+            </image>
+         </ImageView>
+      </graphic></Button>
+   <Button fx:id="editCarButton" layoutX="673.0" layoutY="149.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" style="-fx-background-color: transparent;">
+      <graphic>
+         <ImageView fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../images/editcar.jpg" />
+            </image>
+         </ImageView>
+      </graphic></Button>
+   <Button fx:id="addCustomerButton" layoutX="889.0" layoutY="149.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" style="-fx-background-color: transparency;">
+      <graphic>
+         <ImageView fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../images/addcustomer.jpg" />
+            </image>
+         </ImageView>
+      </graphic></Button>
+   <Button fx:id="showCustomersButton" layoutX="229.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" style="-fx-background-color: transparency;">
+      <graphic>
+         <ImageView fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../images/showcustomers.jpg" />
+            </image>
+         </ImageView>
+      </graphic></Button>
+   <Button fx:id="editCustomerButton" layoutX="451.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" style="-fx-background-color: transparency;">
+      <graphic>
+         <ImageView fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../images/editcustomer.jpg" />
+            </image>
+         </ImageView>
+      </graphic></Button>
+   <Button fx:id="rentCarButton" layoutX="673.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" style="-fx-background-color: transparency;">
+      <graphic>
+         <ImageView fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../images/rentcar.jpg" />
+            </image>
+         </ImageView>
+      </graphic></Button>
+   <Button fx:id="deleteButton" layoutX="889.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" style="-fx-background-color: transparency;">
+      <graphic>
+         <ImageView fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../images/delete.jpg" />
+            </image>
+         </ImageView>
+      </graphic></Button>
    <Text layoutX="229.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dodaj samochód" textAlignment="CENTER" wrappingWidth="160.0">
       <font>
          <Font name="Sitka Heading" size="17.0" />

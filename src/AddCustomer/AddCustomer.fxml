@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -8,15 +11,46 @@
 
 <AnchorPane prefHeight="700.0" prefWidth="1280.0" style="-fx-background-color: green;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddCustomer.AddCustomerController">
     <VBox alignment="CENTER" layoutX="50" layoutY="50" spacing="10" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0" />
-    <Text layoutX="417.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wypożyczalnia" textAlignment="CENTER" wrappingWidth="445.13671875">
+    <Text layoutX="265.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wpisz dane samochodu" textAlignment="CENTER" wrappingWidth="749.13671875">
         <font>
             <Font name="Sitka Heading" size="52.0" />
         </font>
     </Text>
-    <Text layoutX="417.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="scena dodawania klientow" textAlignment="CENTER" wrappingWidth="445.13671875">
+    <Button fx:id="backButton" layoutX="54.0" layoutY="48.0" mnemonicParsing="false" onAction="#backScene" prefHeight="55.0" prefWidth="55.0" style="-fx-background-color: transparency;">
+      <graphic>
+         <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../images/back.jpg" />
+            </image>
+         </ImageView>
+      </graphic></Button>
+    <TextField fx:id="nameField" layoutX="532.0" layoutY="180.0" prefHeight="27.0" prefWidth="216.0" />
+    <TextField fx:id="surnameField" layoutX="532.0" layoutY="264.0" prefHeight="27.0" prefWidth="216.0" />
+    <TextField fx:id="emailField" layoutX="532.0" layoutY="367.0" prefHeight="27.0" prefWidth="216.0" />
+    <TextField fx:id="phoneField" layoutX="532.0" layoutY="471.0" prefHeight="27.0" prefWidth="216.0" />
+    <Button layoutX="583.0" layoutY="549.0" mnemonicParsing="false" onAction="#addCustomer" prefHeight="46.0" prefWidth="113.0" style="-fx-background-color: white;" text="Zatwierdź">
         <font>
-            <Font name="Sitka Heading" size="52.0" />
+            <Font name="Sitka Heading" size="14.0" />
+        </font>
+    </Button>
+    <Text layoutX="417.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wpisz imię:" textAlignment="CENTER" wrappingWidth="445.13671875">
+        <font>
+            <Font name="Sitka Heading" size="24.0" />
         </font>
     </Text>
-   <Button fx:id="backButton" layoutX="54.0" layoutY="48.0" mnemonicParsing="false" onAction="#backScene" prefHeight="46.0" prefWidth="94.0" />
+    <Text layoutX="417.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wpisz nazwisko:" textAlignment="CENTER" wrappingWidth="445.13671875">
+        <font>
+            <Font name="Sitka Heading" size="24.0" />
+        </font>
+    </Text>
+    <Text layoutX="417.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wpisz adres e-mail:" textAlignment="CENTER" wrappingWidth="445.13671875">
+        <font>
+            <Font name="Sitka Heading" size="24.0" />
+        </font>
+    </Text>
+    <Text layoutX="417.0" layoutY="451.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wpisz numer telefonu:" textAlignment="CENTER" wrappingWidth="445.13671875">
+        <font>
+            <Font name="Sitka Heading" size="24.0" />
+        </font>
+    </Text>
 </AnchorPane>
