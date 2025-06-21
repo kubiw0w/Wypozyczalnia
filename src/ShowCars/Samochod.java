@@ -2,28 +2,28 @@ package ShowCars;
 
 public class Samochod {
     private int id;
-    private String marka;
+    private String brand;
     private String model;
-    private int rokProdukcji;
-    private String nrRejestracyjny;
-    private boolean dostepny;
-    private String zdjecie;
+    private int year;
+    private String registrationNr;
+    private boolean available;
+    private String image;
 
-    public Samochod(int id, String marka, String model, int rokProdukcji, String nrRejestracyjny, boolean dostepny, String zdjecie) {
+    public Samochod(int id, String brand, String model, int year, String registrationNr, boolean available, String image) {
         this.id = id;
-        this.marka = marka;
+        this.brand = brand;
         this.model = model;
-        this.rokProdukcji = rokProdukcji;
-        this.nrRejestracyjny = nrRejestracyjny;
-        this.dostepny = dostepny;
-        this.zdjecie = zdjecie;
+        this.year = year;
+        this.registrationNr = registrationNr;
+        this.available = available;
+        this.image = image;
     }
 
     public int getId() { return id; }
-    public String getMarka() { return marka; }
+    public String getBrand() { return brand; }
     public String getModel() { return model; }
-    public int getRokProdukcji() { return rokProdukcji; }
-    public String getNrRejestracyjny() { return nrRejestracyjny; }
-    public boolean isDostepny() { return dostepny; }
-    public String getZdjecie() { return zdjecie; }
+    public int getYear() { return year; }
+    public String getRegistrationNr() { return registrationNr; }
+    public boolean isAvailable() { return available; }
+    public String getImage() { return image; }
 }

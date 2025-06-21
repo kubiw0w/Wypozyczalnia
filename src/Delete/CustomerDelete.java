@@ -37,23 +37,21 @@ public class CustomerDelete {
         }
 
         try {
-            int klientId = Integer.parseInt(idText);
+            int customerId = Integer.parseInt(idText);
 
             try (Connection conn = DBConnection.getConnection()) {
-                // Sprawdzenie czy klient istnieje i ile ma wypożyczeń
                 String selectQuery = "SELECT LICZBA_SAMOCHODOW FROM KLIENCI WHERE NUMER_KLIENTA = ?";
                 try (PreparedStatement selectStmt = conn.prepareStatement(selectQuery)) {
-                    selectStmt.setInt(1, klientId);
+                    selectStmt.setInt(1, customerId);
                     ResultSet rs = selectStmt.executeQuery();
 
                     if (rs.next()) {
-                        int liczbaSamochodow = rs.getInt("LICZBA_SAMOCHODOW");
+                        int carCount = rs.getInt("LICZBA_SAMOCHODOW");
 
-                        if (liczbaSamochodow == 0) {
-                            // Można usunąć
+                        if (carCount == 0) {
                             String deleteQuery = "DELETE FROM KLIENCI WHERE NUMER_KLIENTA = ?";
                             try (PreparedStatement deleteStmt = conn.prepareStatement(deleteQuery)) {
-                                deleteStmt.setInt(1, klientId);
+                                deleteStmt.setInt(1, customerId);
                                 int rowsAffected = deleteStmt.executeUpdate();
 
                                 if (rowsAffected > 0) {

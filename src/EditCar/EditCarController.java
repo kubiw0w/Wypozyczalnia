@@ -48,16 +48,16 @@ public class EditCarController {
 
     @FXML
     void editCar(ActionEvent event) {
-        String nrRejestracyjny = registrationField.getText().trim();
+        String registrationNr = registrationField.getText().trim();
 
-        if (nrRejestracyjny.isEmpty()) {
+        if (registrationNr.isEmpty()) {
             showAlert("Błąd", "Wprowadź numer rejestracyjny.");
             return;
         }
 
         try {
-            if (isCarExist(nrRejestracyjny)) {
-                EditCarForm.setEditedCarNumber(nrRejestracyjny);
+            if (isCarExist(registrationNr)) {
+                EditCarForm.setEditedCarNumber(registrationNr);
                 Login.changeScene("/EditCar/EditCarForm.fxml");
             } else {
                 showAlert("Nie znaleziono", "Nie znaleziono samochodu o takim numerze rejestracyjnym.");

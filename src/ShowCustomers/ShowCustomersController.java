@@ -29,7 +29,7 @@ public class ShowCustomersController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
-            List<Klienci> klienci = KlienciDAO.getAllKlienci();
+            List<Klienci> klienci = KlienciDAO.getAllCustomers();
 
             VBox content = new VBox(10);
             content.setPadding(new Insets(10));
@@ -39,14 +39,14 @@ public class ShowCustomersController implements Initializable {
                 carBox.setStyle("-fx-border-color: gray; -fx-padding: 10;");
 
                 Label info = new Label(
-                        k.getImie() + " " + k.getNazwisko() + "\n" +
+                        k.getName() + " " + k.getSurname() + "\n" +
                                 "Email: " + k.getEmail() + "\n" +
-                                "Telefon: " + k.getTelefon() + "\n" +
-                                "Identyfikator klienta: " + k.getNumer()
+                                "Telefon: " + k.getPhone() + "\n" +
+                                "Identyfikator klienta: " + k.getNumber()
                 );
 
-                carBox.getChildren().add(info);         // <- TO BYŁO BRAK!
-                content.getChildren().add(carBox);      // <- TO TEŻ!
+                carBox.getChildren().add(info);
+                content.getChildren().add(carBox);
             }
 
             customersList.setContent(content);
@@ -55,5 +55,4 @@ public class ShowCustomersController implements Initializable {
             e.printStackTrace();
         }
     }
-
 }

@@ -34,6 +34,9 @@ public class MainMenuController {
     private Button showCustomersButton;
 
     @FXML
+    private Button showReports;
+
+    @FXML
     private void handleButtonAction(ActionEvent event) throws IOException {
         Button clickedButton = (Button) event.getSource();
         String buttonId = clickedButton.getId();
@@ -62,6 +65,9 @@ public class MainMenuController {
                 break;
             case "showCustomersButton":
                 Login.changeScene("/ShowCustomers/ShowCustomers.fxml");
+                break;
+            case "showReports":
+                Login.changeScene("/ShowReports/ShowReports.fxml");
                 break;
             default:
                 System.out.println("Nieznany przycisk!");

@@ -137,7 +137,6 @@ public class EditCarForm {
             return;
         }
 
-        // Usuwamy ostatni przecinek i spację
         queryBuilder.setLength(queryBuilder.length() - 2);
         queryBuilder.append(" WHERE NR_REJESTRACYJNY = ?");
 
@@ -185,6 +184,4 @@ public class EditCarForm {
         alert.setContentText(content);
         alert.showAndWait();
     }
-
-
 }

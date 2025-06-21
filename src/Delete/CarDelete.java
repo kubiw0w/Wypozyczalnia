@@ -29,28 +29,26 @@ public class CarDelete {
 
     @FXML
     void carDelete(ActionEvent event) {
-        String nrRejestracyjny = carField.getText().trim();
+        String registrationNr = carField.getText().trim();
 
-        if (nrRejestracyjny.isEmpty()) {
+        if (registrationNr.isEmpty()) {
             showAlert("Błąd", "Wprowadź numer rejestracyjny.");
             return;
         }
 
         try (Connection conn = DBConnection.getConnection()) {
-            // Sprawdzenie czy samochód istnieje
             String selectQuery = "SELECT DOSTĘPNY FROM SAMOCHODY WHERE UPPER(TRIM(NR_REJESTRACYJNY)) = UPPER(?)";
             try (PreparedStatement selectStmt = conn.prepareStatement(selectQuery)) {
-                selectStmt.setString(1, nrRejestracyjny);
+                selectStmt.setString(1, registrationNr);
                 ResultSet rs = selectStmt.executeQuery();
 
                 if (rs.next()) {
-                    String dostepny = rs.getString("DOSTĘPNY");
+                    String available = rs.getString("DOSTĘPNY");
 
-                    if ("T".equalsIgnoreCase(dostepny)) {
-                        // Samochód dostępny – można usunąć
+                    if ("T".equalsIgnoreCase(available)) {
                         String deleteQuery = "DELETE FROM SAMOCHODY WHERE UPPER(TRIM(NR_REJESTRACYJNY)) = UPPER(?)";
                         try (PreparedStatement deleteStmt = conn.prepareStatement(deleteQuery)) {
-                            deleteStmt.setString(1, nrRejestracyjny);
+                            deleteStmt.setString(1, registrationNr);
                             int rowsAffected = deleteStmt.executeUpdate();
 
                             if (rowsAffected > 0) {

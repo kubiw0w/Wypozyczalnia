@@ -122,7 +122,6 @@ public class EditCustomerForm {
             return;
         }
 
-        // Usuń ostatni przecinek i spację
         queryBuilder.setLength(queryBuilder.length() - 2);
         queryBuilder.append(" WHERE NUMER_KLIENTA = ?");
 
@@ -167,5 +166,4 @@ public class EditCustomerForm {
         alert.setContentText(tresc);
         alert.showAndWait();
     }
-
 }

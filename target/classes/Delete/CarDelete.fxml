@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="700.0" prefWidth="1280.0" style="-fx-background-color: green;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Delete.CarDelete">
     <VBox alignment="CENTER" layoutX="50" layoutY="50" spacing="10" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0" />
-    <Text layoutX="417.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wypożyczalnia" textAlignment="CENTER" wrappingWidth="445.13671875">
+    <Text layoutX="307.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuń samochód" textAlignment="CENTER" wrappingWidth="664.3367919921875">
         <font>
             <Font name="Sitka Heading" size="52.0" />
         </font>

@@ -44,8 +44,6 @@ public class AddCustomerController {
 
         try {
             Connection conn = DBConnection.getConnection();
-
-            // Pobierz największy istniejący numer klienta
             int newClientNumber = 100001; // domyślny początek
 
             String getMaxQuery = "SELECT MAX(NUMER_KLIENTA) FROM KLIENCI";
@@ -59,7 +57,6 @@ public class AddCustomerController {
                 }
             }
 
-            // Wstaw nowego klienta z nowym numerem
             String insertQuery = "INSERT INTO KLIENCI (NUMER_KLIENTA, IMIE, NAZWISKO, EMAIL, TELEFON) VALUES (?, ?, ?, ?, ?)";
             try (PreparedStatement pstmt = conn.prepareStatement(insertQuery)) {
                 pstmt.setInt(1, newClientNumber);

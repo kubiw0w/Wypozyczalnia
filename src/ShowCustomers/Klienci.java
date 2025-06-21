@@ -2,25 +2,25 @@ package ShowCustomers;
 
 public class Klienci {
     private int id;
-    private String imie;
-    private String nazwisko;
+    private String name;
+    private String surname;
     private String email;
-    private String telefon;
-    private int numer;
+    private String phone;
+    private int number;
 
-    public Klienci(int id, String imie, String nazwisko, String email, String telefon, int numer) {
+    public Klienci(int id, String name, String surname, String email, String phone, int number) {
         this.id = id;
-        this.imie = imie;
-        this.nazwisko = nazwisko;
+        this.name = name;
+        this.surname = surname;
         this.email = email;
-        this.telefon = telefon;
-        this.numer = numer;
+        this.phone = phone;
+        this.number = number;
     }
 
     public int getId() { return id; }
-    public String getImie() { return imie; }
-    public String getNazwisko() { return nazwisko; }
+    public String getName() { return name; }
+    public String getSurname() { return surname; }
     public String getEmail() { return email; }
-    public String getTelefon() { return telefon; }
-    public int getNumer() { return numer; }
+    public String getPhone() { return phone; }
+    public int getNumber() { return number; }
 }

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -10,12 +12,7 @@
 
 <AnchorPane prefHeight="700.0" prefWidth="1280.0" style="-fx-background-color: green;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RentCar.RentCarController">
     <VBox alignment="CENTER" layoutX="50" layoutY="50" spacing="10" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0" />
-    <Text layoutX="417.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wypożyczalnia" textAlignment="CENTER" wrappingWidth="445.13671875">
-        <font>
-            <Font name="Sitka Heading" size="52.0" />
-        </font>
-    </Text>
-    <Text layoutX="417.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="scena wypozyczania samochodu" textAlignment="CENTER" wrappingWidth="445.13671875">
+    <Text layoutX="350.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wypożycz samochód:" textAlignment="CENTER" wrappingWidth="579.5367431640625">
         <font>
             <Font name="Sitka Heading" size="52.0" />
         </font>
@@ -28,4 +25,33 @@
             </image>
          </ImageView>
       </graphic></Button>
+   <ComboBox fx:id="customerCombo" layoutX="327.0" layoutY="256.0" prefHeight="25.0" prefWidth="181.0" />
+   <Text layoutX="195.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wybierz klienta:" textAlignment="CENTER" wrappingWidth="445.13671875">
+      <font>
+         <Font name="Sitka Heading" size="24.0" />
+      </font>
+   </Text>
+   <Text layoutX="639.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wybierz samochód:" textAlignment="CENTER" wrappingWidth="445.13671875">
+      <font>
+         <Font name="Sitka Heading" size="24.0" />
+      </font>
+   </Text>
+   <ComboBox fx:id="carCombo" layoutX="772.0" layoutY="256.0" prefHeight="25.0" prefWidth="181.0" />
+   <DatePicker fx:id="beginDate" layoutX="330.0" layoutY="400.0" prefHeight="25.0" prefWidth="181.0" />
+   <DatePicker fx:id="endDate" layoutX="776.0" layoutY="400.0" prefHeight="25.0" prefWidth="181.0" />
+   <Text layoutX="194.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data wypożyczenia:" textAlignment="CENTER" wrappingWidth="445.13671875">
+      <font>
+         <Font name="Sitka Heading" size="24.0" />
+      </font>
+   </Text>
+   <Text layoutX="639.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data zwrotu:" textAlignment="CENTER" wrappingWidth="445.13671875">
+      <font>
+         <Font name="Sitka Heading" size="24.0" />
+      </font>
+   </Text>
+   <Button layoutX="584.0" layoutY="505.0" mnemonicParsing="false" onAction="#rentCar" prefHeight="53.0" prefWidth="112.0" style="-fx-background-color: white;" text="Zatwierdź">
+      <font>
+         <Font name="Sitka Heading" size="14.0" />
+      </font>
+   </Button>
 </AnchorPane>

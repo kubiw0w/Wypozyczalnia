@@ -9,8 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class KlienciDAO {
-    public static List<Klienci> getAllKlienci() throws SQLException {
-        List<Klienci> klienci = new ArrayList<>();
+    public static List<Klienci> getAllCustomers() throws SQLException {
+        List<Klienci> customers = new ArrayList<>();
 
         String query = "SELECT * FROM KLIENCI";
         Connection conn = DBConnection.getConnection();
@@ -30,10 +30,9 @@ public class KlienciDAO {
                         rs.getString("TELEFON"),
                         rs.getInt("NUMER_KLIENTA")
                 );
-                klienci.add(k);
+                customers.add(k);
             }
         }
-
-        return klienci;
+        return customers;
     }
 }

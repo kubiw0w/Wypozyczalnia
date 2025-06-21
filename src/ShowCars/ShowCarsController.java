@@ -33,7 +33,7 @@ public class ShowCarsController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
-            List<Samochod> samochody = SamochodDAO.getAllSamochody();
+            List<Samochod> samochody = SamochodDAO.getAllCars();
 
             VBox content = new VBox(10);
             content.setPadding(new Insets(10));
@@ -43,14 +43,14 @@ public class ShowCarsController implements Initializable {
                 carBox.setStyle("-fx-border-color: gray; -fx-padding: 10;");
 
                 Label info = new Label(
-                        s.getMarka() + " " + s.getModel() + " (" + s.getRokProdukcji() + ")\n" +
-                                "Rejestracja: " + s.getNrRejestracyjny() + "\n" +
-                                "Dostępny: " + (s.isDostepny() ? "Tak" : "Nie")
+                        s.getBrand() + " " + s.getModel() + " (" + s.getYear() + ")\n" +
+                                "Rejestracja: " + s.getRegistrationNr() + "\n" +
+                                "Dostępny: " + (s.isAvailable() ? "Tak" : "Nie")
                 );
 
                 ImageView imageView = new ImageView();
                 try {
-                    Image image = new Image(getClass().getResourceAsStream("/" + s.getZdjecie()));
+                    Image image = new Image(getClass().getResourceAsStream("/" + s.getImage()));
                     imageView.setImage(image);
                     imageView.setFitWidth(500);
                     imageView.setPreserveRatio(true);

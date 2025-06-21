@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SamochodDAO {
-    public static List<Samochod> getAllSamochody() throws SQLException {
-        List<Samochod> samochody = new ArrayList<>();
+    public static List<Samochod> getAllCars() throws SQLException {
+        List<Samochod> cars = new ArrayList<>();
 
         String query = "SELECT * FROM SAMOCHODY";
         Connection conn = DBConnection.getConnection();
@@ -28,10 +28,10 @@ public class SamochodDAO {
                         rs.getString("DOSTĘPNY").equalsIgnoreCase("T"),
                         rs.getString("ZDJECIE")
                 );
-                samochody.add(s);
+                cars.add(s);
             }
         }
 
-        return samochody;
+        return cars;
     }
 }

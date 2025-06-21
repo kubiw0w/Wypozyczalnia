@@ -15,7 +15,7 @@
          <Font name="Sitka Heading" size="52.0" />
       </font>
    </Text>
-   <Button fx:id="addCarButton" layoutX="229.0" layoutY="149.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" style="-fx-background-color: transparent;">
+   <Button fx:id="addCarButton" layoutX="686.0" layoutY="164.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" style="-fx-background-color: transparent;">
       <graphic>
          <ImageView fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
             <image>
@@ -23,7 +23,7 @@
             </image>
          </ImageView>
       </graphic></Button>
-   <Button fx:id="showButton" layoutX="451.0" layoutY="149.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" style="-fx-background-color: transparent;">
+   <Button fx:id="showButton" layoutX="143.0" layoutY="164.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" style="-fx-background-color: transparent;">
       <graphic>
          <ImageView fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
             <image>
@@ -31,7 +31,7 @@
             </image>
          </ImageView>
       </graphic></Button>
-   <Button fx:id="editCarButton" layoutX="673.0" layoutY="149.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" style="-fx-background-color: transparent;">
+   <Button fx:id="editCarButton" layoutX="270.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" style="-fx-background-color: transparent;">
       <graphic>
          <ImageView fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
             <image>
@@ -39,7 +39,7 @@
             </image>
          </ImageView>
       </graphic></Button>
-   <Button fx:id="addCustomerButton" layoutX="889.0" layoutY="149.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" style="-fx-background-color: transparency;">
+   <Button fx:id="addCustomerButton" layoutX="959.0" layoutY="164.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" style="-fx-background-color: transparency;">
       <graphic>
          <ImageView fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
             <image>
@@ -47,7 +47,7 @@
             </image>
          </ImageView>
       </graphic></Button>
-   <Button fx:id="showCustomersButton" layoutX="229.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" style="-fx-background-color: transparency;">
+   <Button fx:id="showCustomersButton" layoutX="14.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" style="-fx-background-color: transparency;">
       <graphic>
          <ImageView fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
             <image>
@@ -55,7 +55,7 @@
             </image>
          </ImageView>
       </graphic></Button>
-   <Button fx:id="editCustomerButton" layoutX="451.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" style="-fx-background-color: transparency;">
+   <Button fx:id="editCustomerButton" layoutX="546.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" style="-fx-background-color: transparency;">
       <graphic>
          <ImageView fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
             <image>
@@ -63,7 +63,7 @@
             </image>
          </ImageView>
       </graphic></Button>
-   <Button fx:id="rentCarButton" layoutX="673.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" style="-fx-background-color: transparency;">
+   <Button fx:id="rentCarButton" layoutX="407.0" layoutY="164.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" style="-fx-background-color: transparency;">
       <graphic>
          <ImageView fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
             <image>
@@ -71,7 +71,7 @@
             </image>
          </ImageView>
       </graphic></Button>
-   <Button fx:id="deleteButton" layoutX="889.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" style="-fx-background-color: transparency;">
+   <Button fx:id="deleteButton" layoutX="1079.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" style="-fx-background-color: transparency;">
       <graphic>
          <ImageView fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
             <image>
@@ -79,42 +79,56 @@
             </image>
          </ImageView>
       </graphic></Button>
-   <Text layoutX="229.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dodaj samochód" textAlignment="CENTER" wrappingWidth="160.0">
+   <Text layoutX="694.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dodaj samochód" textAlignment="CENTER" wrappingWidth="160.0">
       <font>
          <Font name="Sitka Heading" size="17.0" />
       </font>
    </Text>
-   <Text layoutX="451.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wyświetl samochody" textAlignment="CENTER" wrappingWidth="160.0">
+   <Text layoutX="151.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wyświetl samochody" textAlignment="CENTER" wrappingWidth="160.0">
       <font>
          <Font name="Sitka Heading" size="17.0" />
       </font>
    </Text>
-   <Text layoutX="660.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edytuj dane samochodu" textAlignment="CENTER" wrappingWidth="186.0">
+   <Text layoutX="265.0" layoutY="589.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edytuj dane samochodu" textAlignment="CENTER" wrappingWidth="186.0">
       <font>
          <Font name="Sitka Heading" size="17.0" />
       </font>
    </Text>
-   <Text layoutX="890.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dodaj klienta" textAlignment="CENTER" wrappingWidth="160.0">
+   <Text layoutX="967.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dodaj klienta" textAlignment="CENTER" wrappingWidth="160.0">
       <font>
          <Font name="Sitka Heading" size="17.0" />
       </font>
    </Text>
-   <Text layoutX="229.0" layoutY="590.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wyświetl klientów" textAlignment="CENTER" wrappingWidth="160.0">
+   <Text layoutX="14.0" layoutY="589.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wyświetl klientów" textAlignment="CENTER" wrappingWidth="160.0">
       <font>
          <Font name="Sitka Heading" size="17.0" />
       </font>
    </Text>
-   <Text layoutX="673.0" layoutY="590.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wypożycz samochód" textAlignment="CENTER" wrappingWidth="160.0">
+   <Text layoutX="415.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wypożycz samochód" textAlignment="CENTER" wrappingWidth="160.0">
       <font>
          <Font name="Sitka Heading" size="17.0" />
       </font>
    </Text>
-   <Text layoutX="860.0" layoutY="590.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuń samochód lub klienta" textAlignment="CENTER" wrappingWidth="219.0">
+   <Text layoutX="1058.0" layoutY="589.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuń samochód lub klienta" textAlignment="CENTER" wrappingWidth="219.0">
       <font>
          <Font name="Sitka Heading" size="17.0" />
       </font>
    </Text>
-   <Text layoutX="451.0" layoutY="590.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edytuj dane klienta" textAlignment="CENTER" wrappingWidth="160.0">
+   <Text layoutX="554.0" layoutY="589.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edytuj dane klienta" textAlignment="CENTER" wrappingWidth="160.0">
+      <font>
+         <Font name="Sitka Heading" size="17.0" />
+      </font>
+   </Text>
+   <Button fx:id="showReports" layoutX="819.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="160.0" prefWidth="160.0" style="-fx-background-color: transparent;">
+      <graphic>
+         <ImageView fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../images/showreports.jpg" />
+            </image>
+         </ImageView>
+      </graphic>
+   </Button>
+   <Text layoutX="827.0" layoutY="589.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wyświetl raporty" textAlignment="CENTER" wrappingWidth="160.0">
       <font>
          <Font name="Sitka Heading" size="17.0" />
       </font>
